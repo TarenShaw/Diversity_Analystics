@@ -38,3 +38,9 @@ ggplot(data = df) +
   coord_flip() +
   theme_bw() +
   scale_fill_brewer()
+
+ggplot(data = df) +
+  geom_bar(aes(x = job_level, fill = gender), position = "dodge") +
+  theme_bw() +
+  scale_fill_brewer() +
+  facet_wrap(~job_role)
